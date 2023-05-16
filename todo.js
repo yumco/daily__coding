@@ -23,6 +23,8 @@ function saveToDos(){
     const li = event.target.parentElement;
     console.log(li.id);
     li.remove();
+    toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+    saveToDos();
  }
 
 function paintToDo(newTodo){
@@ -39,7 +41,7 @@ function paintToDo(newTodo){
 }
 
 
-function handleToDoSummit(event) {
+function handleToDoSubmit(event) {
     event.preventDefault();
     const newTodo = toDoInput.value;
     toDoInput.value = "";
