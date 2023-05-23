@@ -1,16 +1,16 @@
 const images = [
-    "8.jpg",
-    "1.jpg",
-    "7.jpg",
-    "3.jpg",
-    "4.jpg"
+    "11.jpg",
+    "22.jpg",
+    "33.jpg",
+    "44.jpg",
+    "55.jpg"
 ];
 
 const chosenImage = images[Math.floor(Math.random() * images.length)];
 
 const bgImage = document.createElement("img");
 
-bgImage.src = `js/img/${chosenImage}`;
+bgImage.src =`/img ${chosenImage}`;
 
 console.log(bgImage);
 
